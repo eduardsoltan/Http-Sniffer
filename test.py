@@ -7,6 +7,7 @@ import shelve
 import threading
 import sys
 import string
+import re
 from collections import deque
 from sortedcontainers import SortedDict
 
@@ -48,7 +49,7 @@ class threadClass(threading.Thread):
                 print(str(e))
 
 
-def main(httpVerbs):
+def main(filterValues):
     global queue
     global event
 
@@ -56,10 +57,10 @@ def main(httpVerbs):
     conn.setsockopt( socket.SOL_SOCKET, socket.SO_RCVBUF, 100000000) 
         
     while True:
-            #65536
+        #65536
         raw_data, addr = conn.recvfrom(65536)
 
-        queue.append((raw_data, httpVerbs))
+        queue.append((raw_data, filterValues))
         
         if len(queue) == 1:
             t1 = threadClass()
@@ -150,15 +151,35 @@ def verifyExistance(headers, content):
             return False
     return True
     
-def parseHttp(httpPacket):
+def parseHttp(httpPacket, comunicationIdentifier, filterValues):
     global httpPackets
+    global reassembly_strucutre
+
     try:
+        if reassembly_strucutre[comunicationIdentifier][3] == False:
+            return
+
         splitRequest = httpPacket.split(b"\r\n\r\n", 1)
 
         if b'HTTP/1.1' not in splitRequest[0]:
             return
 
         length = getHeaderValue(splitRequest[0], 'Content-Length')
+
+        host = getHeaderValue(splitRequest[0], 'Host')
+
+        if len(host) > 0:
+            if filterValues[0] not in host:
+                reassembly_strucutre[comunicationIdentifier][3] = False
+                return
+    
+        headers = splitRequest[0].decode("utf-8")
+        firstSplit = headers.split(" ", 1)
+
+        if firstSplit[0] in filterValues[1]:
+            reassembly_strucutre[comunicationIdentifier][3] = False
+            return
+
 
         if len(length) > 0:
             length = int(length)
@@ -177,7 +198,6 @@ def parseHttp(httpPacket):
             return
 
         if len(splitRequest[1]) == 0:
-            headers = splitRequest[0].decode("utf-8")
             if verifyExistance(headers, "") == True:
                 httpPackets.append((headers, ""))
             return
@@ -187,7 +207,6 @@ def parseHttp(httpPacket):
 
 
         contentEncoding = getHeaderValue(splitRequest[0], "Content-Encoding")
-        headers = splitRequest[0].decode("utf-8")
 
         if contentEncoding == 'gzip':
             splitEncoded = splitRequest[1].split(b"\r\n")
@@ -209,7 +228,7 @@ def parseHttp(httpPacket):
     except Exception as e:
         print(str(e))
 
-def constructPacket(data):
+def constructPacket(data, comunicationIdentifier, filterValues):
     try:
         if len(data) > 0:
             payload = bytes()
@@ -227,16 +246,7 @@ def constructPacket(data):
                 seq_nr = a 
                 segemntLength = len(data[a])
 
-
-        #sortedSegments = sorted(data, key = lambda i: i[0])
-
-        #for a in range(1, len(sortedSegments), 1):
-        #    if sortedSegments[a][0] != sortedSegments[a-1][0] + len(sortedSegments[a-1][1]):
-        #        return
-            
-        #for a in sortedSegments:
-        #    payload = payload + a[1]
-        parseHttp(payload)
+        parseHttp(payload, comunicationIdentifier, filterValues)
     except Exception as e:
         print(str(e))
 
@@ -244,7 +254,7 @@ def constructPacket(data):
 count1 = 0
 vec = bytes()
 
-def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, data):
+def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, filterValues, data):
     global count1
     global vec
     
@@ -254,36 +264,27 @@ def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, d
         comunicationIdentifier = ip_src + ":" + ip_dest + ":" + str(port_src)
     try:
         if len(data) != 0:
-        
             if comunicationIdentifier not in reassembly_strucutre:
-                firstSplit = data.split(b" ", 1)
-
-                if firstSplit[0] in httpVerbs:
-                    return
-
                 new_set = set()
                 new_set.add(seq_number)
 
                 new_sorted_dic = SortedDict()
                 new_sorted_dic.setdefault(seq_number, data)
-                reassembly_strucutre[comunicationIdentifier] = [new_sorted_dic, port_src, new_set]
+                reassembly_strucutre[comunicationIdentifier] = [new_sorted_dic, port_src, new_set, True]
             else:
-
                 if port_src != reassembly_strucutre[comunicationIdentifier][1]:
-                    firstSplit = data.split(b" ", 1)
-
-                    if firstSplit[0] in httpVerbs:
-                        reassembly_strucutre.pop(comunicationIdentifier)
+                    if port_src == 80 and reassembly_strucutre[comunicationIdentifier][3] == False:
                         return
-                        
+
                     new_set = set()
                     new_set.add(seq_number)
                     new_sorted_dic = SortedDict()
                     new_sorted_dic.setdefault(seq_number, data)
-                    reassembly_strucutre[comunicationIdentifier] = [new_sorted_dic, port_src, new_set]
+                    reassembly_strucutre[comunicationIdentifier] = [new_sorted_dic, port_src, new_set, True]
                 else:
                     new_set = reassembly_strucutre[comunicationIdentifier][2]
                     sorted_dic = reassembly_strucutre[comunicationIdentifier][0]
+                    
                     isResend = False
                     
                     if seq_number in new_set:
@@ -292,8 +293,8 @@ def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, d
                     if isResend == False:
                         new_set.add(seq_number)
                         sorted_dic.setdefault(seq_number, data)
-                        reassembly_strucutre[comunicationIdentifier] = [sorted_dic, port_src, new_set]
+                        reassembly_strucutre[comunicationIdentifier] = [sorted_dic, port_src, new_set, True]
                         
-            constructPacket(reassembly_strucutre[comunicationIdentifier][0])
+            constructPacket(reassembly_strucutre[comunicationIdentifier][0], comunicationIdentifier, filterValues)
     except Exception as e:
         print(str(e))

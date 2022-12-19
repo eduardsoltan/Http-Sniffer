@@ -73,9 +73,10 @@ class thread(threading.Thread):
  
     def run(self):
         global httpVerbs
+        global input_field
 
-        httpVerbs = [bytes(a, 'utf-8') for a in httpVerbs]
-        t.main(httpVerbs)
+        filterValues = [input_field.get(), httpVerbs]
+        t.main(filterValues)
 
 root = tk.Tk()
 root.title("Http Sniffer")
@@ -100,13 +101,22 @@ def buttonClick(verb, column, value):
             httpVerbs.append(verb)
 
         put_button = tk.Button(content, text=verb, bg="red", width = 15, command = lambda: buttonClick(verb, column, 1))
-        put_button.grid(row = 2, column = column, pady = 10)
+        put_button.grid(row = 2, column = column, pady = 10, stickey = "nsew")
     elif value == 1:
         if verb in httpVerbs:
             httpVerbs.remove(verb)
 
         put_button = tk.Button(content, text=verb, bg="green", width = 15, command = lambda: buttonClick(verb, column, 0))
-        put_button.grid(row = 2, column = column, pady = 10)
+        put_button.grid(row = 2, column = column, pady = 10, sticky = "nsew")
+
+
+
+root.grid_rowconfigure(0, weight = 1)
+root.grid_columnconfigure(0, weight = 1)
+content.grid_columnconfigure(0, weight = 1)
+content.grid_columnconfigure(1, weight = 1)
+content.grid_columnconfigure(2, weight = 1)
+content.grid_columnconfigure(3, weight = 1)
 
 
 lable = tk.Label(content, text = "Let's sniff some Http Traffic")
@@ -114,16 +124,16 @@ input_field = tk.Entry(content, width = 75)
 get_button = tk.Button(content, text="GET", bg = "green", width = 15, command = lambda: buttonClick("GET", 0, 0))
 post_button = tk.Button(content, text="POST", bg = "green", width = 15, command = lambda: buttonClick("POST", 1,  0))
 put_button = tk.Button(content, text="PUT", bg = "green", width = 15, command = lambda: buttonClick("PUT", 2, 0))
-delete_button = tk.Button(content, text="DELETE", bg = "green",  width = 15, command = lambda: buttonClick("DELTE", 3, 0))
+delete_button = tk.Button(content, text="DELETE", bg = "green", width = 15, command = lambda: buttonClick("DELTE", 3, 0))
 sniff_button = tk.Button(content, text = "Sniff", width = 15, command=resizeScreen)
 
-content.grid(row = 0, column = 0)
-lable.grid(row = 0, column = 0, columnspan = 4, pady = 10)
-input_field.grid(row = 1, column = 0, columnspan = 4,pady = 10)
-get_button.grid(row = 2, column = 0, pady = 10)
-post_button.grid(row = 2, column = 1, pady = 10)
-put_button.grid(row = 2, column = 2, pady = 10)
-delete_button.grid(row = 2, column = 3, pady = 10)
-sniff_button.grid(row = 3, column = 1, columnspan = 2)
+content.grid(row = 0, column = 0, sticky = "nsew")
+lable.grid(row = 0, column = 0, columnspan = 4, pady = 10, sticky = "nsew")
+input_field.grid(row = 1, column = 0, columnspan = 4,pady = 10, sticky = "nsew")
+get_button.grid(row = 2, column = 0, pady = 10, sticky = "nsew")
+post_button.grid(row = 2, column = 1, pady = 10, sticky = "nsew")
+put_button.grid(row = 2, column = 2, pady = 10, sticky = "nsew")
+delete_button.grid(row = 2, column = 3, pady = 10, sticky = "nsew")
+sniff_button.grid(row = 3, column = 1, columnspan = 2, sticky = "nsew")
 
 root.mainloop()
