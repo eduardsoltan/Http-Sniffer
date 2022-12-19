@@ -1,0 +1,26 @@
+﻿app.service('itemsService', function ($http) {
+    var items_per_page = 5;
+
+    var items = [];
+
+    this.getPopularItems = function (page, callback) {
+        var offset = page * items_per_page;
+
+        $http.get('/ajax/popular?offset=' + offset).success(callback);
+    };
+
+    this.getLatestItems = function (page, callback) {
+        var offset = page * items_per_page;
+
+        $http.get('/ajax/latest?offset=' + offset).success(callback);
+    };
+
+    this.getArchiveItems = function (callback) {
+        $http.get('/ajax/archive').success(callback);
+    };
+
+    this.like = function (id, callback) {
+        $http.get('/ajax/like?id=' + id).success(callback).error(callback);
+    };
+
+});

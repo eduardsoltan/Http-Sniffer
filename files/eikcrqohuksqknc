@@ -1,0 +1,116 @@
+// JavaScript Document
+
+jQuery(document).ready(function($) {
+    "use strict";
+	
+	/* BACKGROUND SLIDER */
+    $('.revolution').owlCarousel({
+        // Most important owl features
+        items: 1,
+        itemsCustom: false,
+        itemsDesktop: [1199, 1],
+        itemsDesktopSmall: [980, 1],
+        itemsTablet: [630, 1],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1],
+        singleItem: true,
+        itemsScaleUp: false,
+        responsive: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseWidth: window,
+        autoPlay: true,
+        stopOnHover: false,
+        navigation: false
+    });
+	
+	/* LATEST ARTICLES */
+	$("#slider-two").owlCarousel({
+        // Most important owl features
+        items: 2,
+        itemsCustom: false,
+        itemsDesktop: [1199, 2],
+        itemsDesktopSmall: [980, 2],
+        itemsTablet: [630, 1],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1],
+        singleItem: false,
+        itemsScaleUp: false,
+        responsive: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseWidth: window,
+        autoPlay: false,
+        stopOnHover: false,
+        navigation: false
+    });
+	
+	// Related owl slider script
+    $("#nav-slider-two .next").click(function() {
+        $("#slider-two").trigger('owl.next');
+    });
+    $("#nav-slider-two .prev").click(function() {
+        $("#slider-two").trigger('owl.prev');
+    });
+	
+	
+	/* NEW */
+	$(".slider-three").owlCarousel({
+        // Most important owl features
+        items: 3,
+        itemsCustom: false,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [980, 3],
+        itemsTablet: [630, 2],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1],
+        singleItem: false,
+        itemsScaleUp: false,
+        responsive: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseWidth: window,
+        autoPlay: false,
+        stopOnHover: false,
+        navigation: false
+    });
+	
+	// Related owl slider script
+    $("#nav-slider-three .next").click(function() {
+        $("#slider-three").trigger('owl.next');
+		$("#low-slider-three").trigger('owl.next');
+    });
+    $("#nav-slider-three .prev").click(function() {
+        $("#slider-three").trigger('owl.prev');
+		$("#low-slider-three").trigger('owl.prev');
+    });
+	
+	
+	/* GALLERY */
+	$("#gallery-three").owlCarousel({
+        // Most important owl features
+        items: 3,
+        itemsCustom: false,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [980, 3],
+        itemsTablet: [630, 2],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1],
+        singleItem: false,
+        itemsScaleUp: false,
+        responsive: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseWidth: window,
+        autoPlay: false,
+        stopOnHover: false,
+        navigation: false
+    });
+	
+	// Related owl slider script
+    $("#nav-gallery-three .next").click(function() {
+        $("#gallery-three").trigger('owl.next');
+    });
+    $("#nav-gallery-three .prev").click(function() {
+        $("#gallery-three").trigger('owl.prev');
+    });
+
+  $('[data-toggle="tooltip"]').tooltip()
+
+});
