@@ -1,0 +1,6 @@
+GET /ubuntu/dists/bionic-updates/multiverse/dep11/by-hash/SHA256/81ec5531c9fe919491e2612fe5e62233a4fa27ac9fea6d546e4395ec4e48fbab HTTP/1.1
+Host: ro.archive.ubuntu.com
+Cache-Control: max-age=0
+Accept: text/*
+User-Agent: Debian APT-HTTP/1.3 (1.6.14)
+

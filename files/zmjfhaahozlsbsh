@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">``
+    <![endif]-->
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="Cybertek Systems">
+    	
+    
+    <title>Home | Ministerul Mediului</title>
+    
+    <link href="http://www.mmediu.ro/favicon.ico?v=2" type="image/x-icon" rel="icon" /><link href="http://www.mmediu.ro/favicon.ico?v=2" type="image/x-icon" rel="shortcut icon" />    
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" type="text/css" href="/css/theme-style.css" /><link rel="stylesheet" type="text/css" href="/css/ie.style.css" /><link rel="stylesheet" type="text/css" href="/js/magnific-popup/magnific-popup.css" />    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><script type="text/javascript" src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>    <![endif]-->
+    <!--[if IE 7]>
+    	<link rel="stylesheet" type="text/css" href="/css/font-awesome-ie7.css" />    <![endif]-->
+    <script type="text/javascript" src="/js/vendor/modernizr.js"></script>    <!--[if IE 8]><script type="text/javascript" src="/js/vendor/less-1.3.3.js"></script><![endif]-->
+    <!--[if gt IE 8]><!--><!--<![endif]-->
+  	
+    <link rel="stylesheet" type="text/css" href="/js/rating/css/application.css" /><link rel="stylesheet" type="text/css" href="/js/scrollbar/jquery.mCustomScrollbar.css" />       
+    <script type="text/javascript">
+		var base_root = 'http://www.mmediu.ro/';
+		var sign_up = '/subscribers/add';
+	</script>
+    
+    	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59108648-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+</head>
+
+<body>
+
+	<!-- Header-->
+
+<section id="bg-slider">
+    <div class="revolution-container">
+        <ul class="revolution">	<!-- SLIDE  -->
+        
+                        <li>
+                <!-- MAIN IMAGE -->
+                <img src="/img/banner/picture/14/normal_12272682985480668509034.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="" />                
+                <div class="slider-caption">
+                    <div class="container">
+                        <div class="s-title">Bine ati venit pe site-ul</div>
+                        <div class="s-subtitle">MINISTERULUI MEDIULUI, APELOR ȘI PĂDURILOR</div>
+                    </div>
+              	</div>
+                
+            </li>
+                        <li>
+                <!-- MAIN IMAGE -->
+                <img src="/img/banner/picture/19/normal_105097912754b4eaf3afdff.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="" />                
+                <div class="slider-caption">
+                    <div class="container">
+                        <div class="s-title">Bine ati venit pe site-ul</div>
+                        <div class="s-subtitle">MINISTERULUI MEDIULUI, APELOR ȘI PĂDURILOR</div>
+                    </div>
+              	</div>
+                
+            </li>
+                        <li>
+                <!-- MAIN IMAGE -->
+                <img src="/img/banner/picture/20/normal_95306620354b65e1eca197.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="" />                
+                <div class="slider-caption">
+                    <div class="container">
+                        <div class="s-title">Bine ati venit pe site-ul</div>
+                        <div class="s-subtitle">MINISTERULUI MEDIULUI, APELOR ȘI PĂDURILOR</div>
+                    </div>
+              	</div>
+                
+            </li>
+                        <li>
+                <!-- MAIN IMAGE -->
+                <img src="/img/banner/picture/23/normal_108456360254ca03372f27e.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="" />                
+                <div class="slider-caption">
+                    <div class="container">
+                        <div class="s-title">Bine ati venit pe site-ul</div>
+                        <div class="s-subtitle">MINISTERULUI MEDIULUI, APELOR ȘI PĂDURILOR</div>
+                    </div>
+              	</div>
+                
+            </li>
+                    </ul>
+    </div>
+</section>
+<header id="header">
+	
+	<div class="container" id="header-wrap">
+		<!-- header-account menu -->
+<div id="top-menu" class="clearfix text-center">
+    
+   <ul class="nav navbar-nav centering">
+   		<li><a href="/">Acasa</a></li>
+                			<li>
+				<a href="/categorie/minister/6">Minister</a>			</li>                
+					<li>
+				<a href="/categorie/comunicare/7">Comunicare</a>			</li>                
+					<li>
+				<a href="/categorie/domenii/8">Domenii</a>			</li>                
+					<li>
+				<a href="/categorie/programe-de-finantare/9">Programe de finantare</a>			</li>                
+					<li>
+				<a href="/categorie/transparenta/10">Transparenta</a>			</li>                
+					<li>
+				<a href="/categorie/informatii-de-interes-public/11">Informatii de interes public</a>			</li>                
+		        <li><a href="/messages/send">Contact</a></li>
+    </ul>
+    
+</div>
+<!-- /header-account menu -->        
+        <div class="row">
+            <div class="col-sm-12" align="center">
+                <a href="/" class="header-logo"><img src="/img/setting/picture/2/20980939685dcd6cb3062cd.png" alt="Ministerul Mediului" /></a>       
+            </div>
+            
+        </div>
+        
+        <div class="header-main-block2">
+    <nav class="navbar yamm  navbar-main" role="navigation">
+
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#main-navbar-collapse" class="navbar-toggle"><span class="fa fa-bars"></span></button>
+            </div>
+            <div id="main-navbar-collapse" class="navbar-collapse collapse text-center">
+                <ul class="nav navbar-nav clearfix centering">
+                	                                            <li>
+                            <a href="/categorie/galerie-foto/39" style="color: #219ac2;"><img src="/img/category/icon/39/min_" alt="" />&nbsp;<span>Galerie foto</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/atmosfera-poluare/18" style="color:  #35b24a;"><img src="/img/category/icon/18/min_protectia-atmosferei-si-controlul-poluarii-54b7bce06bf4b.png" alt="" />&nbsp;<span>Atmosfera / Poluare</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/gestionarea-deseurilor/22" style="color: #219ac2;"><img src="/img/category/icon/22/min_gestionarea-deseurilor-54b674411a634.png" alt="" />&nbsp;<span>Gestionarea Deșeurilor</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/documente-de-planificare-pngd-pjgd/239" style="color: #219ac2;"><img src="/img/category/icon/239/min_planul-national-de-gestionare-a-deseurilor-5a560beb0c2a8.png" alt="" />&nbsp;<span>Documente de planificare (PNGD/PJGD)</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/managementul-apelor/24" style="color: #219ac2;"><img src="/img/category/icon/24/min_managementul-apelor-54b673955d38e.png" alt="" />&nbsp;<span>Managementul Apelor</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/paduri/25" style="color: #219ac2;"><img src="/img/category/icon/25/min_paduri-54b6724eb62b0.png" alt="" />&nbsp;<span>Păduri</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/sumal-2-0/321" style="color: #FF00FF;"><img src="/img/category/icon/321/min_sumal-2-0-60118ee63fea4.jpeg" alt="" />&nbsp;<span>SUMAL 2.0</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/afaceri-europene/27" style="color:  #716657;"><img src="/img/category/icon/27/min_afaceri-europene-549195020d88b.png" alt="" />&nbsp;<span>Afaceri Europene</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/informatii-brexit/305" style="color: #219ac2;"><img src="/img/category/icon/305/min_informatii-brexit-5fda4d826d45b.jpg" alt="" />&nbsp;<span>Informații Brexit</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/mediul-in-lume/28" style="color:  #00a4d1;"><img src="/img/category/icon/28/min_mediul-in-lume-5492a67072639.png" alt="" />&nbsp;<span>Mediul in lume</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/schimbari-climatice/1" style="color: #35b24a;"><img src="/img/category/icon/1/min_energie-aer-si-climat-5457ebb183e61.png" alt="" />&nbsp;<span>Schimbări climatice</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/protectia-naturii/4" style="color: #246fb0;"><img src="/img/category/icon/4/min_protectia-naturii-5457ed6be6186.png" alt="" />&nbsp;<span>Protectia Naturii</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/dezvoltare-durabila/195" style="color: #35b24a;"><img src="/img/category/icon/195/min_dezvoltare-durabila-57e2a704f3186.png" alt="" />&nbsp;<span>Dezvoltare Durabila</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/guvernare-transparenta/257" style="color: #219ac2;"><img src="/img/category/icon/257/min_guvernare-transparenta-5d283a824d75a.png" alt="" />&nbsp;<span>Guvernare transparentă</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/pndr-2014-2020/183" style="color: #219ac2;"><img src="/img/category/icon/183/min_pndr-2014-2020-58f0a76a93823.jpg" alt="" />&nbsp;<span>PNDR 2014 - 2020</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/eea-grants/110" style="color: #219ac2;"><img src="/img/category/icon/110/min_eea-grants-5d9f2c270b857.png" alt="" />&nbsp;<span>EEA Grants</span></a>                        </li>                
+                                            <li>
+                            <a href="/categorie/pnrr/410" style="color: #219ac2;"><img src="/img/category/icon/410/min_pnrr-628f29c7592b8.png" alt="" />&nbsp;<span>PNRR</span></a>                        </li>                
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- /header-main-menu -->      
+    </div>
+</header>
+
+<div class="container">
+    <div class="top-search-form pull-right">
+    	<form action="/search/quicksearch" id="quicksearch" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>       
+			<input name="data[Search][keyword]" class="form-control" placeholder="Cautare..." type="text" id="SearchKeyword"/>            
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form> 
+    </div>        
+</div>
+            
+<!-- End header -->	
+    <div class="container main-wrap">
+		        <section>
+
+<h2 class="title green">
+	Ultima ora    <div class="toolbar-for-light pull-right" id="nav-slider-two">
+        <a href="javascript:;" data-role="prev" class="prev"><i class="fa fa-angle-left"></i></a>
+        <a href="javascript:;" data-role="next" class="next"><i class="fa fa-angle-right"></i></a>
+    </div>
+</h2>
+
+<ul id="slider-two" class="article-slider clearfix">
+	<li>
+    	<article>
+        	<div class="art-wrap">
+				<a href="/articol/fermierii-responsabili-din-judetul-constanta-beneficiaza-de-o-noua-platforma-comunala-pentru-gunoiul-de-grajd/5832"><img src="/img/article/picture/5832/min_fermierii-responsabili-din-judetul-constanta-beneficiaza-de-o-noua-platforma-comunala-pentru-gunoiul-de-grajd-639c0f3a62663.jpeg" class="img-responsive" alt="" /></a>   
+                
+                <div class="overlay">
+                	<div class="caption">
+                        <h3><a href="/articol/fermierii-responsabili-din-judetul-constanta-beneficiaza-de-o-noua-platforma-comunala-pentru-gunoiul-de-grajd/5832">Fermierii responsabili din judeţul Constanţa beneficiază de o nouă platformă comunală p...</a></h3>
+                        <p>COMUNICAT DE PRESĂ 15 decembrie 2022 Gestionarea corectă a gunoiului de grajd reprezintă una dintre cele mai importante responsabilități ale crescătorilor de animale, dar și ale autorităților locale pentru a proteja apele din zonă de poluarea cu nitrați. Astfel, localitatea Saraiu din judeţul Con...</p>
+                        <div class="readmore">
+                            <a href="/articol/fermierii-responsabili-din-judetul-constanta-beneficiaza-de-o-noua-platforma-comunala-pentru-gunoiul-de-grajd/5832">Detalii</a>                        </div>
+                   	</div>
+                </div>
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap">
+				<a href="/articol/a-fost-aprobat-bugetul-ministerului-mediului-apelor-si-padurilor-pe-2023/5827"><img src="/img/article/picture/5827/min_a-fost-aprobat-bugetul-ministerului-mediului-apelor-si-padurilor-pe-2023-639ac613d274b.jpg" class="img-responsive" alt="" /></a>   
+                
+                <div class="overlay">
+                	<div class="caption">
+                        <h3><a href="/articol/a-fost-aprobat-bugetul-ministerului-mediului-apelor-si-padurilor-pe-2023/5827">A fost aprobat bugetul Ministerului Mediului, Apelor și Pădurilor pe 2023</a></h3>
+                        <p>COMUNICAT DE PRESĂ 14 decembrie 2022 Membrii comisiilor reunite de buget-finanţe din Parlament au aprobat, astăzi, proiectul de buget al Ministerului Mediului, Apelor şi Pădurilor (MMAP) pentru anul 2023, cu majoritate de voturi. Au fost depuse și admise 29 de amendamente. Propunerea de buget pen...</p>
+                        <div class="readmore">
+                            <a href="/articol/a-fost-aprobat-bugetul-ministerului-mediului-apelor-si-padurilor-pe-2023/5827">Detalii</a>                        </div>
+                   	</div>
+                </div>
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap">
+				<a href="/articol/aprobare-oug-pentru-modificarea-si-completarea-unor-acte-normative-din-domeniul-silviculturii/5825"><img src="/img/article/picture/5825/min_aprobare-oug-pentru-modificarea-si-completarea-unor-acte-normative-din-domeniul-silviculturii-6399d62531040.jpg" class="img-responsive" alt="" /></a>   
+                
+                <div class="overlay">
+                	<div class="caption">
+                        <h3><a href="/articol/aprobare-oug-pentru-modificarea-si-completarea-unor-acte-normative-din-domeniul-silviculturii/5825">Aprobare OUG pentru modificarea și completarea unor acte normative din domeniul silvicu...</a></h3>
+                        <p>COMUNICAT DE PRESĂ București, 14 decembrie 2022 La propunerea Ministerului Mediului, Apelor și Pădurilor, Guvernul României a aprobat, în sedința de astăzi, 14 decembrie 2022, Ordonanţa de Urgență pentru modificarea și completarea unor acte normative din domeniul silviculturii. Prin această OUG s...</p>
+                        <div class="readmore">
+                            <a href="/articol/aprobare-oug-pentru-modificarea-si-completarea-unor-acte-normative-din-domeniul-silviculturii/5825">Detalii</a>                        </div>
+                   	</div>
+                </div>
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap">
+				<a href="/articol/ministrul-barna-tanczos-a-lansat-astazi-campania-de-informare-si-constientizare-reciclam-in-romania/5776"><img src="/img/article/picture/5776/min_ministrul-barna-tanczos-a-lansat-astazi-campania-de-informare-si-constientizare-reciclam-in-romania-6385a3485adc1.jpg" class="img-responsive" alt="" /></a>   
+                
+                <div class="overlay">
+                	<div class="caption">
+                        <h3><a href="/articol/ministrul-barna-tanczos-a-lansat-astazi-campania-de-informare-si-constientizare-reciclam-in-romania/5776">Ministrul Barna Tánczos a lansat astăzi campania de informare și conștientizare ”Recicl...</a></h3>
+                        <p>COMUNICAT DE PRESĂ Ministrul Mediului, Apelor și Pădurilor, Barna Tánczos, a participat astăzi la conferința de presă de lansare a campaniei integrate de informare și educare privind colectarea separată a deșeurilor, intitulată "Reciclăm în România". Aceasta este prima campanie națională derulată...</p>
+                        <div class="readmore">
+                            <a href="/articol/ministrul-barna-tanczos-a-lansat-astazi-campania-de-informare-si-constientizare-reciclam-in-romania/5776">Detalii</a>                        </div>
+                   	</div>
+                </div>
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap">
+				<a href="/articol/o-comuna-din-judetul-prahova-se-adauga-listei-de-beneficiari-ai-investitiilor-finantate-de-ministerul-mediului-apelor-si-padurilor-mmap/5792"><img src="/img/article/picture/5792/min_o-comuna-din-judetul-prahova-se-adauga-listei-de-beneficiari-ai-investitiilor-finantate-de-ministerul-mediului-apelor-si-padurilor-mmap-638d86e11d2b7.jpeg" class="img-responsive" alt="" /></a>   
+                
+                <div class="overlay">
+                	<div class="caption">
+                        <h3><a href="/articol/o-comuna-din-judetul-prahova-se-adauga-listei-de-beneficiari-ai-investitiilor-finantate-de-ministerul-mediului-apelor-si-padurilor-mmap/5792"> O comună din județul Prahova se adaugă listei de beneficiari ai investițiilor finanțat...</a></h3>
+                        <p>COMUNICAT DE PRESĂ Noua platformă comunală cu o capacitate de 1.610 de metri cubi/an, finalizată în comuna Mizil, judeţul Prahova, vine în sprijinul fermierilor şi micilor crescători de animale de animale, fiind construită în cadrul proiectului „Controlul Integrat al Poluării cu Nutrienți" (CIPN)...</p>
+                        <div class="readmore">
+                            <a href="/articol/o-comuna-din-judetul-prahova-se-adauga-listei-de-beneficiari-ai-investitiilor-finantate-de-ministerul-mediului-apelor-si-padurilor-mmap/5792">Detalii</a>                        </div>
+                   	</div>
+                </div>
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap">
+				<a href="/articol/noi-capacitati-de-stocare-a-gunoiului-de-grajd-pentru-prevenirea-poluarii-apei-cu-nitrati-in-judetul-cluj/5791"><img src="/img/article/picture/5791/min_noi-capacitati-de-stocare-a-gunoiului-de-grajd-pentru-prevenirea-poluarii-apei-cu-nitrati-in-judetul-cluj-638d85eaeef39.jpeg" class="img-responsive" alt="" /></a>   
+                
+                <div class="overlay">
+                	<div class="caption">
+                        <h3><a href="/articol/noi-capacitati-de-stocare-a-gunoiului-de-grajd-pentru-prevenirea-poluarii-apei-cu-nitrati-in-judetul-cluj/5791">Noi capacități de stocare a gunoiului de grajd pentru prevenirea poluării apei cu nitra...</a></h3>
+                        <p>COMUNICAT DE PRESĂ Crescătorii de animale din comuna clujeană Luna beneficiază de o platformă comunală cu o capacitate de 2.700 mc/an, pentru colectarea și gestionarea gunoiului de grajd, în strictă conformitate cu reglementările naționale și europene în vigoare, privind prevenirea poluării apelo...</p>
+                        <div class="readmore">
+                            <a href="/articol/noi-capacitati-de-stocare-a-gunoiului-de-grajd-pentru-prevenirea-poluarii-apei-cu-nitrati-in-judetul-cluj/5791">Detalii</a>                        </div>
+                   	</div>
+                </div>
+          	</div>
+        </article>
+    </li>
+</ul>
+
+</section>
+<section>
+
+<h2 class="title blue">
+	Noutati    <div class="toolbar-for-light pull-right" id="nav-slider-three">
+        <a href="javascript:;" data-role="prev" class="prev"><i class="fa fa-angle-left"></i></a>
+        <a href="javascript:;" data-role="next" class="next"><i class="fa fa-angle-right"></i></a>
+    </div>
+</h2>
+
+<ul id="slider-three" class="article-slider slider-three clearfix">
+	
+
+	<li>
+    	<article>
+        	<a href="/articol/ministerul-mediului-apelor-si-padurilor-in-calitate-de-operator-de-program-pentru-granturile-see-2014-2021-lanseaza-astazi-9-martie-2022-ghidul-solicitantului-apel-de-propuneri-pentru-masuri-de-reducere-a-contaminarii-cu-substante-periculoase-in-depozite-m/4997"><img src="/img/article/picture/4997/min_ministerul-mediului-apelor-si-padurilor-in-calitate-de-operator-de-program-pentru-granturile-see-2014-2021-lanseaza-astazi-9-martie-2021-ghidul-solicitantului-apel-de-propuneri-pentru-masuri-de-reduce-6228c1e65546b.jpg" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">09 Mar 2022</div>
+                <h3 class="semibold"><a href="/articol/ministerul-mediului-apelor-si-padurilor-in-calitate-de-operator-de-program-pentru-granturile-see-2014-2021-lanseaza-astazi-9-martie-2022-ghidul-solicitantului-apel-de-propuneri-pentru-masuri-de-reducere-a-contaminarii-cu-substante-periculoase-in-depozite-m/4997">Ministerul Mediului, Apelor și Pădurilor în calitate de Operator de Program pentru Granturile SEE 2014-2021...</a></h3>
+                
+                <p class="black normal">RO - MMAP în calitate de Operator de Program pentru Granturile SEE 2014-2021, lansează astăzi, 9 martie 2022, "Ghidul solicitantului - APEL DE PROPUNERI pentru Măsuri de reducere a contaminării cu substanțe periculoase în depozite municipale temporare" (Ghid + Anexe) finanțat în cadrul Mecanismul...</p>
+                <div class="readmore">
+                    <a href="/articol/ministerul-mediului-apelor-si-padurilor-in-calitate-de-operator-de-program-pentru-granturile-see-2014-2021-lanseaza-astazi-9-martie-2022-ghidul-solicitantului-apel-de-propuneri-pentru-masuri-de-reducere-a-contaminarii-cu-substante-periculoase-in-depozite-m/4997">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	
+	
+
+	<li>
+    	<article>
+        	<a href="/articol/informare/5569"><img src="/img/article/picture/5569/min_informare-632457dfa6c6b.jpg" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">16 Sep 2022</div>
+                <h3 class="semibold"><a href="/articol/informare/5569">Informare</a></h3>
+                
+                <p class="black normal">Ministerul Mediului, Apelor şi Pădurilor în colaborare cu Ministerul Climei și al Mediului din cadrul Guvernul Republicii Polonia au organizat, pe 11 iulie și 6 septembrie 2022, două reuniuni bilaterale virtuale, având caracter informal, pentru a aborda teme de actualitate din domeniul biodiversi...</p>
+                <div class="readmore">
+                    <a href="/articol/informare/5569">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+		<li>
+    	<article>
+        	<a href="/categorie/rapoarte-zilnice-starea-mediului/111"><img src="/img/meteo.png" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">19 Dec 2022</div>
+                <h3 class="semibold"><a href="/categorie/rapoarte-zilnice-starea-mediului/111">Starea mediului astazi - Rapoarte zilnice</a></h3>
+                
+                <p class="black normal">
+		Va invitam sa accesati aceasta sectiune pentru a descarca raportul actualizat privind situatia hidrometeorologica si calitatea mediului. Totodata, veti putea vedea arhiva rapoartelor din ultima perioada.
+		</p>
+                <div class="readmore">
+                    <a href="/categorie/rapoarte-zilnice-starea-mediului/111">Detalii</a>                </div>
+          	</div>
+        </article>
+   	</li>
+
+	
+	
+
+	<li>
+    	<article>
+        	<a href="/articol/ministerul-mediului-apelor-si-padurilor-a-inceput-procesul-de-identificare-in-teren-a-habitatelor-forestiere-degradate-in-vederea-intocmirii-planului-de-reconstructie-ecologica-pentru-aceste-suprafete/5546"><img src="/img/article/picture/5546/min_ministerul-mediului-apelor-si-padurilor-a-inceput-procesul-de-identificare-in-teren-a-habitatelor-forestiere-degradate-in-vederea-intocmirii-planului-de-reconstructie-ecologica-pentru-aceste-suprafete-6318bcf92b78f.png" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">07 Sep 2022</div>
+                <h3 class="semibold"><a href="/articol/ministerul-mediului-apelor-si-padurilor-a-inceput-procesul-de-identificare-in-teren-a-habitatelor-forestiere-degradate-in-vederea-intocmirii-planului-de-reconstructie-ecologica-pentru-aceste-suprafete/5546">Ministerul Mediului, Apelor și Pădurilor a început procesul de identificare în teren a habitatelor forestie...</a></h3>
+                
+                <p class="black normal">Astfel, planul de reconstrucție ecologică rezultat la finalul acestei prime etape de identificare a habitatelor forestiere degradate se axează pe cele patru situri și va cuprinde 2376 ha distribuite astfel: • ROSCI0085 Frumoasa: 679 hectare • ROSCI0122 Munții Făgăraș: 478 hectare • ROSCI0124 Munț...</p>
+                <div class="readmore">
+                    <a href="/articol/ministerul-mediului-apelor-si-padurilor-a-inceput-procesul-de-identificare-in-teren-a-habitatelor-forestiere-degradate-in-vederea-intocmirii-planului-de-reconstructie-ecologica-pentru-aceste-suprafete/5546">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	
+	
+
+	<li>
+    	<article>
+        	<a href="/articol/mmap-publica-proiectul-de-ordin-pentru-aprobarea-ghidului-de-finantare-a-programului-privind-ecologizarea-zonelor-afectate-de-deseuri/5077"><img src="/img/article/picture/5077/min_mmap-publica-proiectul-de-ordin-pentru-aprobarea-ghidului-de-finantare-a-programului-privind-ecologizarea-zonelor-afectate-de-deseuri-62472561914a3.jpg" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">01 Apr 2022</div>
+                <h3 class="semibold"><a href="/articol/mmap-publica-proiectul-de-ordin-pentru-aprobarea-ghidului-de-finantare-a-programului-privind-ecologizarea-zonelor-afectate-de-deseuri/5077">MMAP publică proiectul de ordin pentru aprobarea Ghidului de finanţare a Programului privind ecologizarea z...</a></h3>
+                
+                <p class="black normal">În conformitate cu prevederile art.7 alin.(13) din Legea nr. 52/2003 privind transparenţa decizională în administraţia publică, republicată, cu modificările ulterioare, „(13) Prin excepţie de la prevederile alin. (2), în cazul reglementării unei situaţii urgente sau a uneia care, din cauza circum...</p>
+                <div class="readmore">
+                    <a href="/articol/mmap-publica-proiectul-de-ordin-pentru-aprobarea-ghidului-de-finantare-a-programului-privind-ecologizarea-zonelor-afectate-de-deseuri/5077">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	
+	
+
+	<li>
+    	<article>
+        	<a href="/articol/ministerul-mediului-apelor-si-padurilor-a-trimis-in-avizare-interministeriala-propunerea-de-ordonanta-de-urgenta-a-guvernului-pentru-aprobarea-masurilor-necesare-realizarii-campaniei-nationale-de-impadurire-si-reimpadurire-prevazute-in-planul-national-de-r/4946"><img src="/img/article/picture/4946/min_ministerul-mediului-apelor-si-padurilor-a-trimis-in-avizare-interministeriala-propunerea-de-ordonanta-de-urgenta-a-guvernului-pentru-aprobarea-masurilor-necesare-realizarii-campaniei-nationale-de-impa-621372f2f3555.jpg" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">21 Feb 2022</div>
+                <h3 class="semibold"><a href="/articol/ministerul-mediului-apelor-si-padurilor-a-trimis-in-avizare-interministeriala-propunerea-de-ordonanta-de-urgenta-a-guvernului-pentru-aprobarea-masurilor-necesare-realizarii-campaniei-nationale-de-impadurire-si-reimpadurire-prevazute-in-planul-national-de-r/4946">Ministerul Mediului, Apelor și Pădurilor a trimis în avizare interministerială propunerea de Ordonanță de u...</a></h3>
+                
+                <p class="black normal">Ministerul Mediului, Apelor și Pădurilor a trimis în avizare interministerială propunerea de Ordonanță de urgență a Guvernului pentru aprobarea măsurilor necesare realizării campaniei naționale de împădurire și reîmpădurire prevăzute în Planul național de redresare și reziliență. Prin Ordonanța d...</p>
+                <div class="readmore">
+                    <a href="/articol/ministerul-mediului-apelor-si-padurilor-a-trimis-in-avizare-interministeriala-propunerea-de-ordonanta-de-urgenta-a-guvernului-pentru-aprobarea-masurilor-necesare-realizarii-campaniei-nationale-de-impadurire-si-reimpadurire-prevazute-in-planul-national-de-r/4946">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	
+	
+
+	<li>
+    	<article>
+        	<a href="/articol/parcul-national-domogled-valea-cernei-proiect-pilot-de-crestere-a-nivelului-de-noninterventie-pana-la-minim-75-din-suprafata/4830"><img src="/img/article/picture/4830/min_parcul-national-domogled-valea-cernei-proiect-pilot-de-crestere-a-nivelului-de-noninterventie-pana-la-minim-75-din-suprafata-61dbfbbfbb8c8.jpeg" class="img-responsive" alt="" /></a>   
+                
+        	<div class="art-wrap blue">
+				
+                <div class="italic gray medium">10 Jan 2022</div>
+                <h3 class="semibold"><a href="/articol/parcul-national-domogled-valea-cernei-proiect-pilot-de-crestere-a-nivelului-de-noninterventie-pana-la-minim-75-din-suprafata/4830">Parcul Național Domogled-Valea Cernei – proiect pilot de creștere a nivelului de nonintervenție până la min...</a></h3>
+                
+                <p class="black normal">Ministrul Barna Tánczos a anunțat, în cadrul unei conferințe de presă, că MMAP demarează procedurile pentru creșterea nivelului de nonintervenție în parcurile naționale și naturale, până la nivelul minim de 75%, conform recomandărilor UE și IUCN. Prima arie protejată care va beneficia de creștere...</p>
+                <div class="readmore">
+                    <a href="/articol/parcul-national-domogled-valea-cernei-proiect-pilot-de-crestere-a-nivelului-de-noninterventie-pana-la-minim-75-din-suprafata/4830">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	
+</ul>
+
+
+
+<ul id="low-slider-three" class="article-slider slider-three clearfix">
+	
+	<li>
+    	<article> 
+        	<div class="art-wrap blue">
+                <h3 class="semibold"><a href="/articol/anunt-privind-organizarea-concursului-de-recrutare-pentru-ocuparea-unui-post-aferent-functiei-publice-de-executie-vacante-de-consilier-achizitii-publice-clasa-i-grad-profesional-principal-serviciul-achizitii-din-cadrul-directiei-generale-economice-investit/5743">Anunt privind organizarea concursului de recrutare pentru ocuparea unui post aferent functiei publice de ex...</a></h3>
+                
+                <p class="black normal">Anunt privind organizarea concursului de recrutare pentru ocuparea unui post aferent functiei publice de executie vacante de consilier achiziții publice, clasa I, grad profesional principal – Serviciul Achiziții din cadrul Direcției Generale Economice, Investiții și Administrativ 19.12.2022, ora ...</p>
+                <div class="italic gray medium">18 Nov 2022</div>
+                
+                <div class="readmore">
+                    <a href="/articol/anunt-privind-organizarea-concursului-de-recrutare-pentru-ocuparea-unui-post-aferent-functiei-publice-de-executie-vacante-de-consilier-achizitii-publice-clasa-i-grad-profesional-principal-serviciul-achizitii-din-cadrul-directiei-generale-economice-investit/5743">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	<li>
+    	<article> 
+        	<div class="art-wrap blue">
+                <h3 class="semibold"><a href="/articol/anunt-privind-organizarea-concursului-de-recrutare-pentru-ocuparea-postului-aferente-functiei-publice-de-executie-vacante-de-consilier-clasa-i-grad-profesional-superior-in-cadrul-serviciului-contabilitate-directia-generala-economica-investitii-si-administr/5744">Anunt privind organizarea concursului de recrutare pentru ocuparea postului aferente funcţiei publice de ex...</a></h3>
+                
+                <p class="black normal">Anunt privind organizarea concursului de recrutare pentru ocuparea postului aferente funcţiei publice de execuție vacante de consilier, clasa I, grad profesional superior în cadrul Serviciului Contabilitate - Direcția Generală Economică, Investiții și Administrativ 19.12.2022, ora 1000 - proba sc...</p>
+                <div class="italic gray medium">18 Nov 2022</div>
+                
+                <div class="readmore">
+                    <a href="/articol/anunt-privind-organizarea-concursului-de-recrutare-pentru-ocuparea-postului-aferente-functiei-publice-de-executie-vacante-de-consilier-clasa-i-grad-profesional-superior-in-cadrul-serviciului-contabilitate-directia-generala-economica-investitii-si-administr/5744">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	<li>
+    	<article> 
+        	<div class="art-wrap blue">
+                <h3 class="semibold"><a href="/articol/proiect-de-ordin-privind-aprobarea-regulamentului-pacului-natural-vacaresti/5835">Proiect de Ordin privind aprobarea Regulamentului Pacului Natural Văcărești</a></h3>
+                
+                <p class="black normal">În conformitate cu Legea nr. 52/2003 privind transparența decizională în administrația publică, republicată, Ministerul Mediului, Apelor și Pădurilor (MMAP) supune dezbaterii publice proiectul de Ordin privind aprobarea Regulamentului Pacului Natural Văcărești. Proiect de ordin | Referat de aprob...</p>
+                <div class="italic gray medium">19 Dec 2022</div>
+                
+                <div class="readmore">
+                    <a href="/articol/proiect-de-ordin-privind-aprobarea-regulamentului-pacului-natural-vacaresti/5835">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	<li>
+    	<article> 
+        	<div class="art-wrap blue">
+                <h3 class="semibold"><a href="/articol/hotarare-a-guvernului-privind-aprobarea-protocolului-de-amendare-a-acordului-intre-guvernul-romaniei-si-guvernul-republicii-moldova-privind-reglementarea-construirii-unor-apeducte-semnat-la-chisinau-la-20-mai-2021-semnat-la-iasi-la-10-noiembrie-2022/5830">Hotărâre a Guvernului privind aprobarea Protocolului de amendare a Acordului între Guvernul României și Guv...</a></h3>
+                
+                <p class="black normal">În conformitate cu prevederile Legii nr. 52/2003 privind transparenţa decizională în administraţia publică, republicată, Ministerul Mediului, Apelor și Pădurilor (MMAP) supune consultării publice proiectul de Hotărâre a Guvernului privind aprobarea Protocolului de amendare a Acordului între Guver...</p>
+                <div class="italic gray medium">15 Dec 2022</div>
+                
+                <div class="readmore">
+                    <a href="/articol/hotarare-a-guvernului-privind-aprobarea-protocolului-de-amendare-a-acordului-intre-guvernul-romaniei-si-guvernul-republicii-moldova-privind-reglementarea-construirii-unor-apeducte-semnat-la-chisinau-la-20-mai-2021-semnat-la-iasi-la-10-noiembrie-2022/5830">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	<li>
+    	<article> 
+        	<div class="art-wrap blue">
+                <h3 class="semibold"><a href="/articol/constructie-noua-a-infrastructurii-de-transport-port-maritim-terminal-in-izmail-raionul-izmail-regiunea-odesa-si-cale-ferata-de-acces-adiacenta-statiei-izmail-a-sucursalei-regionale-calea-ferata-din-odesa/5292">Construcție nouă a infrastructurii de transport - port maritim (terminal) în Izmail, raionul Izmail, regiun...</a></h3>
+                
+                <p class="black normal">[15.12.2022] Ministerul Mediului, Apelor și Pădurilor pune la dispoziția publicului studiul de evaluare a impactului asupra mediului (EIA Report), primit din partea Ministerului Protecției Mediului și Resurselor Naturale din Ucraina. Descarcă document – studiul de evaluare a impactului asupra med...</p>
+                <div class="italic gray medium">22 Jun 2022</div>
+                
+                <div class="readmore">
+                    <a href="/articol/constructie-noua-a-infrastructurii-de-transport-port-maritim-terminal-in-izmail-raionul-izmail-regiunea-odesa-si-cale-ferata-de-acces-adiacenta-statiei-izmail-a-sucursalei-regionale-calea-ferata-din-odesa/5292">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+	
+	<li>
+    	<article> 
+        	<div class="art-wrap blue">
+                <h3 class="semibold"><a href="/articol/concurs-de-recrutare-pentru-ocuparea-unui-post-aferent-functiei-publice-de-executie-vacante-de-consilier-clasa-i-grad-profesional-debutant-in-cadrul-serviciului-contractare-directia-programare-evaluare-si-contractare-directia-generala-planul-national-de-re/5763">Concurs de recrutare pentru ocuparea unui post aferent funcţiei publice de execuție vacante de consilier, c...</a></h3>
+                
+                <p class="black normal">Concurs de recrutare pentru ocuparea unui post aferent funcţiei publice de execuție vacante de consilier, clasa I, grad profesional debutant în cadrul Serviciului Contractare - Direcția Programare, Evaluare și Contractare - Direcția Generală Planul Național de Redresare și Reziliență 12.12.2022, ...</p>
+                <div class="italic gray medium">25 Nov 2022</div>
+                
+                <div class="readmore">
+                    <a href="/articol/concurs-de-recrutare-pentru-ocuparea-unui-post-aferent-functiei-publice-de-executie-vacante-de-consilier-clasa-i-grad-profesional-debutant-in-cadrul-serviciului-contractare-directia-programare-evaluare-si-contractare-directia-generala-planul-national-de-re/5763">Detalii</a>                </div>
+          	</div>
+        </article>
+    </li>
+</ul>
+</section>
+
+<section>
+
+<h2 class="title red">
+	Galerie Foto    <div class="toolbar-for-light pull-right" id="nav-gallery-three">
+        <a href="javascript:;" data-role="prev" class="prev"><i class="fa fa-angle-left"></i></a>
+        <a href="javascript:;" data-role="next" class="next"><i class="fa fa-angle-right"></i></a>
+    </div>
+</h2>
+
+<ul id="gallery-three" class="article-slider clearfix">
+	<li>
+    	<article>
+        	<div class="art-wrap blue">
+            	<div class="red-overlay">
+					<a href="/articol/ministrul-mediului-apelor-si-padurilor-tanczos-barna-a-semnat-contractul-care-contribuie-la-cresterea-capacitatii-de-avertizare-a-populatiei-cu-privire-la-fenomenele-meteo-periculoase-si-de-vreme-severa-imediata/5789"><img src="/img/article/picture/5789/min_ministrul-mediului-apelor-si-padurilor-tanczos-barna-a-semnat-contractul-care-contribuie-la-cresterea-capacitatii-de-avertizare-a-populatiei-cu-privire-la-fenomenele-meteo-periculoase-si-de-vreme-seve-6385dc0bdf728.jpg" class="img-responsive" alt="" /></a>   
+				</div>
+                
+                <div class="caption black">
+                    <div class="italic normal">29 Nov 2022</div>
+                    <h3 class="bold"><a href="/articol/ministrul-mediului-apelor-si-padurilor-tanczos-barna-a-semnat-contractul-care-contribuie-la-cresterea-capacitatii-de-avertizare-a-populatiei-cu-privire-la-fenomenele-meteo-periculoase-si-de-vreme-severa-imediata/5789">Ministrul mediului, apelor și pădurilor, Tánczos Barna, a semnat contractul care contribuie la creșterea ca...</a></h3>
+                    <div class="readmore">
+                    	<a href="/articol/ministrul-mediului-apelor-si-padurilor-tanczos-barna-a-semnat-contractul-care-contribuie-la-cresterea-capacitatii-de-avertizare-a-populatiei-cu-privire-la-fenomenele-meteo-periculoase-si-de-vreme-severa-imediata/5789">Detalii</a>                	</div>
+                </div>
+               	
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap blue">
+            	<div class="red-overlay">
+					<a href="/articol/ministrii-mediului-din-romania-si-ucraina-au-semnat-pentru-punerea-in-aplicare-a-prevederilor-conventiei-privind-evaluarea-impactului-asupra-mediului-in-context-transfrontiera/5788"><img src="/img/article/picture/5788/min_ministrii-mediului-din-romania-si-ucraina-au-semnat-pentru-punerea-in-aplicare-a-prevederilor-conventiei-privind-evaluarea-impactului-asupra-mediului-in-context-transfrontiera-6385da2e06a26.jpg" class="img-responsive" alt="" /></a>   
+				</div>
+                
+                <div class="caption black">
+                    <div class="italic normal">29 Nov 2022</div>
+                    <h3 class="bold"><a href="/articol/ministrii-mediului-din-romania-si-ucraina-au-semnat-pentru-punerea-in-aplicare-a-prevederilor-conventiei-privind-evaluarea-impactului-asupra-mediului-in-context-transfrontiera/5788">Miniștrii mediului din România și Ucraina au semnat pentru punerea în aplicare a prevederilor Convenției pr...</a></h3>
+                    <div class="readmore">
+                    	<a href="/articol/ministrii-mediului-din-romania-si-ucraina-au-semnat-pentru-punerea-in-aplicare-a-prevederilor-conventiei-privind-evaluarea-impactului-asupra-mediului-in-context-transfrontiera/5788">Detalii</a>                	</div>
+                </div>
+               	
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap blue">
+            	<div class="red-overlay">
+					<a href="/articol/ziua-biodiversitatii-sarbatorita-la-cop27/5787"><img src="/img/article/picture/5787/min_ziua-biodiversitatii-sarbatorita-la-cop27-6385d9303e458.jpg" class="img-responsive" alt="" /></a>   
+				</div>
+                
+                <div class="caption black">
+                    <div class="italic normal">29 Nov 2022</div>
+                    <h3 class="bold"><a href="/articol/ziua-biodiversitatii-sarbatorita-la-cop27/5787">Ziua Biodiversității sărbătorită la #COP27</a></h3>
+                    <div class="readmore">
+                    	<a href="/articol/ziua-biodiversitatii-sarbatorita-la-cop27/5787">Detalii</a>                	</div>
+                </div>
+               	
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap blue">
+            	<div class="red-overlay">
+					<a href="/articol/inaugurarea-lucrarilor-de-innisipare-la-lotul-5-din-cadrul-proiectului-de-protectie-si-reabilitare-a-litoratului-romanesc-al-marii-negre-in-zona-eforie/5544"><img src="/img/article/picture/5544/min_inaugurarea-lucrarilor-de-innisipare-la-lotul-5-din-cadrul-proiectului-de-protectie-si-reabilitare-a-litoratului-romanesc-al-marii-negre-in-zona-eforie-63189031eb79e.jpg" class="img-responsive" alt="" /></a>   
+				</div>
+                
+                <div class="caption black">
+                    <div class="italic normal">07 Sep 2022</div>
+                    <h3 class="bold"><a href="/articol/inaugurarea-lucrarilor-de-innisipare-la-lotul-5-din-cadrul-proiectului-de-protectie-si-reabilitare-a-litoratului-romanesc-al-marii-negre-in-zona-eforie/5544">Inaugurarea lucrărilor de înnisipare la lotul 5, din cadrul  „Proiectului de protecție și reabilitare a lit...</a></h3>
+                    <div class="readmore">
+                    	<a href="/articol/inaugurarea-lucrarilor-de-innisipare-la-lotul-5-din-cadrul-proiectului-de-protectie-si-reabilitare-a-litoratului-romanesc-al-marii-negre-in-zona-eforie/5544">Detalii</a>                	</div>
+                </div>
+               	
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap blue">
+            	<div class="red-overlay">
+					<a href="/articol/ministrul-mediului-apelor-si-padurilor-barna-tanczos-la-expozitia-de-la-cluj-napoca-dedicata-prezentarii-ecoinsulelor-digitalizate/5543"><img src="/img/article/picture/5543/min_ministrul-mediului-apelor-si-padurilor-barna-tanczos-la-expozitia-de-la-cluj-napoca-dedicata-prezentarii-ecoinsulelor-digitalizate-63188e6917512.jpg" class="img-responsive" alt="" /></a>   
+				</div>
+                
+                <div class="caption black">
+                    <div class="italic normal">07 Sep 2022</div>
+                    <h3 class="bold"><a href="/articol/ministrul-mediului-apelor-si-padurilor-barna-tanczos-la-expozitia-de-la-cluj-napoca-dedicata-prezentarii-ecoinsulelor-digitalizate/5543">Ministrul Mediului, Apelor și Pădurilor, Barna Tánczos, la expoziția de la Cluj-Napoca, dedicată prezentări...</a></h3>
+                    <div class="readmore">
+                    	<a href="/articol/ministrul-mediului-apelor-si-padurilor-barna-tanczos-la-expozitia-de-la-cluj-napoca-dedicata-prezentarii-ecoinsulelor-digitalizate/5543">Detalii</a>                	</div>
+                </div>
+               	
+          	</div>
+        </article>
+    </li>
+	<li>
+    	<article>
+        	<div class="art-wrap blue">
+            	<div class="red-overlay">
+					<a href="/articol/ministrul-barna-tanczos-prezent-la-actiunile-de-control-pentru-surprinderea-activitatilor-ilegale-din-domeniul-deseurilor-in-bolintin-vale/5542"><img src="/img/article/picture/5542/min_ministrul-barna-tanczos-prezent-la-actiunile-de-control-pentru-surprinderea-activitatilor-ilegale-din-domeniul-deseurilor-in-bolintin-vale-63188a8edb317.jpg" class="img-responsive" alt="" /></a>   
+				</div>
+                
+                <div class="caption black">
+                    <div class="italic normal">07 Sep 2022</div>
+                    <h3 class="bold"><a href="/articol/ministrul-barna-tanczos-prezent-la-actiunile-de-control-pentru-surprinderea-activitatilor-ilegale-din-domeniul-deseurilor-in-bolintin-vale/5542">Ministrul Barna Tánczos,  prezent la acțiunile de control pentru surprinderea activităților ilegale din dom...</a></h3>
+                    <div class="readmore">
+                    	<a href="/articol/ministrul-barna-tanczos-prezent-la-actiunile-de-control-pentru-surprinderea-activitatilor-ilegale-din-domeniul-deseurilor-in-bolintin-vale/5542">Detalii</a>                	</div>
+                </div>
+               	
+          	</div>
+        </article>
+    </li>
+</ul>
+</section>
+
+
+<section>
+	    
+	<h2 class="title magenta">
+        Despre Noi    </h2>
+
+	<article id="about">
+    	<a href="/pagina/despre-noi/1"><img src="/img/page/picture/1/normal_despre-noi-5458181984097.jpg" class="img-responsive" alt="" /></a>        <div class="caption">
+        	<div class="row">
+            	<div class="col-sm-7 col-md-6 col-lg-5">
+                	<div class="overlay magenta">
+                        <h3 class="semibold"><a href="/pagina/despre-noi/1">Despre Noi</a></h3>
+                            
+                        <p class="black normal">Mediul înconjurător reprezintă un element esențial al vieții noastre, de aceea impune o atenție deosebită din partea societății și o grijă sporită din partea instituțiilor abilitate. Ministerul Mediului are, printre altele, misiunea de a supraveghea permanent starea mediului înconjurător, de a ac...</p> 
+                        
+                        <div class="readmore">
+                            <a href="/pagina/despre-noi/1">Detalii</a>                        </div>
+                  	</div>
+              	</div>
+          	</div>
+        </div>
+    </article>
+</section>
+
+
+
+
+
+
+
+<section>
+
+<h2 class="title light-green">
+	Conducerea MMAP
+</h2>
+
+<div class="row" id="members">
+	
+	
+</div>
+<br/>	
+		<div class="row">
+			
+		
+
+		</div>
+	
+
+
+
+<br/>
+<a href="/echipa" class="btn btn-primary pull-right">Vezi toata echipa</a></section>
+
+
+
+<section>
+
+<h2 class="title">
+	Contact</h2>
+<div class="row">
+	<div class="col-sm-6 col-md-5">
+    	<h2><strong>Ministerul Mediului, Apelor și Pădurilor&nbsp;</strong></h2>
+
+<h2><strong>Adresa:</strong></h2>
+
+<p>Bvd. Libertăţii nr. 12, Sector 5, Bucureşti<br />
+Web:&nbsp;<a href="http://www.mmediu.ro/" style="box-sizing: border-box; color: rgb(28, 165, 247); text-decoration: none; background: transparent;">http://www.mmediu.ro</a></p>
+
+<p><strong>Program de funcţionare Ministerul Mediului, Apelor și Pădurilor:</strong></p>
+
+<p>Luni &ndash; Joi: 08:00 &ndash; 16:30<br />
+Vineri: 08:00 &ndash; 14:00</p>
+
+<h3><strong>Registratura:</strong></h3>
+
+<p>Fax: 004 021 408 9615<br />
+Telefon:&nbsp;021/408 9642<br />
+E-mail<span style="color:rgb(0, 0, 0); font-family:helvetica,tahoma,arial,sans-serif; font-size:14.6667px">:&nbsp;&nbsp;</span><a href="mailto:registratura@mmediu.ro">registratura@mmediu.ro</a></p>
+
+<h3><strong>Programul de Relații cu Publicul &ndash; PETIȚII </strong></h3>
+
+<p>Luni, Marţi, Joi: 08:00 &ndash; 16:30<br />
+Miercuri: 08:00 &ndash; 18:30<br />
+Vineri:&nbsp; 08:00 - 14:00</p>
+
+<p>Telefon: 004 021 408 9500<br />
+E-mail: <a href="mailto:petitii@mmediu.ro">petitii@mmediu.ro</a></p>
+
+<h3><strong>Informaţii de interes public conform legii 544/2001</strong></h3>
+
+<p><strong>Telefon:&nbsp;</strong>004 021 408 9605<br />
+E-mail:&nbsp;<a href="mailto:solicitari544@mmediu.ro">solicitari544@mmediu.ro</a></p>
+
+<h3><strong>Rela</strong><strong>ții cu presa</strong></h3>
+
+<p>Telefon : 004 021 408 9605<br />
+E-mail:&nbsp;<a href="mailto:comunicare@mmediu.ro">comunicare@mmediu.ro</a></p>
+
+<p><a href="http://mmediu.ro/categorie/formulare-tip/170" target="_blank"><strong>Model cerere acreditare pentru presa</strong></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p><a href="/app/webroot/uploads/files/Politica%20Ministerului%20Mediului%2C%20Apelor%20si%20Padurilor%20cu%20privire%20la%20supravegherea%20video.rar">Politica Ministerului Mediului, Apelor și Pădurilor cu privire la supravegherea video</a></p>
+
+<p><a href="/app/webroot/uploads/files/NOT%C4%82%20DE%20INFORMARE_MMAP_03.03.2021%281%29.doc"><strong>NOTĂ DE INFORMARE&nbsp;</strong><strong>PRIVIND PRELUCRAREA DATELOR CU CARACTER PERSONAL DE C</strong><strong>ĂTRE&nbsp;</strong><strong>MINISTERUL MEDIULUI, APELOR </strong><strong>ȘI PĂDURILOR (MMAP)</strong></a></p>
+
+<h3 style="text-align:justify"><strong><span style="color:#0000FF">Acest site foloseşte cookies. Navig&acirc;nd &icirc;n continuare vă exprimaţi acordul asupra folosirii cookie-urilor.</span> <a href="http://www.mmediu.ro/articol/conditii-de-utilizare/2715" target="_blank">Detalii</a></strong></h3>
+    </div>
+    <div class="col-sm-6 col-md-7">
+    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.3722412112274!2d26.088970615795212!3d44.42552601016284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff6d3af45c43%3A0xe7c7c45371ea6e2f!2sMinisterul%20Mediului%2C%20Apelor%20%C8%99i%20P%C4%83durilor!5e0!3m2!1sen!2sro!4v1596454805398!5m2!1sen!2sro" width="535" height="401" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+    </div>
+</div>
+</section>	</div>
+    
+    <footer id="footer-block">
+    <div class="footer-information">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-9">
+                    <div class="header-footer">
+                        <h4>Link-uri utile</h4>
+                    </div>
+					
+                    <div class="row">
+                    	                        
+                        <div class="col-sm-6">
+                            <ul class="footer-categories list-unstyled">
+                                                                    <li><a href="http://www.gov.ro">Guvernul Romaniei</a></li>
+                                                                    <li><a href="http://www.mae.ro/">Ministerul Afacerilor Externe</a></li>
+                                                                    <li><a href="http://www.madr.ro/ro/">Ministerul Agriculturii si Dezvoltarii Rurale</a></li>
+                                                                    <li><a href="https://www.mlpda.ro">Ministerul Dezvoltarii Regionale si Administratiei Publice</a></li>
+                                                                    <li><a href="http://www.economie.gov.ro">Ministerul Economiei, Energiei si Mediului de Afaceri</a></li>
+                                                                    <li><a href="http://www.mfinante.ro/">Ministerul Finantelor Publice</a></li>
+                                                            </ul>
+                        </div>
+                        
+                                                
+                        <div class="col-sm-6">
+                            <ul class="footer-categories list-unstyled">
+                                                                    <li><a href="http://mfe.gov.ro">Ministerul Fondurilor Europene</a></li>
+                                                                    <li><a href="http://www.just.ro/">Ministerul Justitiei</a></li>
+                                                                    <li><a href="http://www.mmuncii.ro/ ">Ministerul Muncii si Protectiei Sociale</a></li>
+                                                                    <li><a href="http://www.mt.ro/">Ministerul Transporturilor</a></li>
+                                                                    <li><a href="http://posturi.gov.ro/">Posturi vacante din Instituțiile Publice</a></li>
+                                                            </ul>
+                        </div>
+                        
+                                          	</div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="header-footer">
+                        <h4>Parteneri</h4>
+                    </div>
+                    <a href="http://www.mmediu.ro/beta/"><img src="/img/partner/picture/26/min_17009966195975db66198e3.png" class="img-responsive partner" alt="" /></a>					
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copy color-scheme-1">
+        <div class="container">
+			
+			<!--
+			<div class="row">
+				<div class="col-md-11">
+				<a href="https://europa.eu/youreurope/index.htm#ro" target="_blank">
+				<img alt="Your Europe" src="./app/webroot/uploads/images/LogoYourEurope.png" width="283" height="139" style="margin:0 0 20px 0">
+				</a>
+				</div>		
+			</div>
+			-->
+			
+			<div class="row">
+			
+			<div class="col-sm-6">
+				<a href="https://www.recensamantromania.ro/" target="_blank">
+				<img src="http://www.mmediu.ro/app/webroot/img/RPL_2021_orizontal_wbg.png" alt="Recensamant Romania" width="407" height="84" style="margin:0 0 10px 0">				
+				</a>	
+            </div>
+	
+
+				<div class="col-md-6">
+
+				<a href="http://conect.gov.ro/" target="_blank">
+				<img src="http://www.mmediu.ro/app/webroot/img/conect_logo.png" alt="Platforma Conect" width="407" height="84" style="margin:0 0 10px 0">				
+				</a>	
+
+				</div>		
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-md-6">&nbsp;
+				</div>		
+			</div>
+		
+            <div class="row">
+                <div class="col-md-6">
+                  	Copyright 2022 © <a href="http://www.mmediu.ro">MINISTERUL MEDIULUI, APELOR SI PADURILOR</a>
+                </div>
+                <div class="col-md-6 footer-menu">
+             		<div id="logon" class="pull-right">
+                        <span>
+                        |
+                        <a href="https://stsmail.ro/aurora/" target="_blank">Webmail</a>
+                        </span>
+                          |
+
+                          
+                    
+                        
+                  	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    <script type="text/javascript" src="/js/vendor/jquery.js"></script><script type="text/javascript" src="/js/vendor/jquery.easing.1.3.js"></script><script type="text/javascript" src="/js/vendor/bootstrap.js"></script><script type="text/javascript" src="/js/vendor/owl.carousel.js"></script><script type="text/javascript" src="/js/magnific-popup/jquery.magnific-popup.min.js"></script><script type="text/javascript" src="/js/main.js"></script>    
+    </body>
+
+
+</html>

@@ -1,0 +1,6 @@
+GET /ubuntu/dists/bionic-security/multiverse/dep11/by-hash/SHA256/d37800c578e80fe7b5fea94eed94e445b568062283f2cfef7dfabb8e60edc06f HTTP/1.1
+Host: security.ubuntu.com
+Cache-Control: max-age=0
+Accept: text/*
+User-Agent: Debian APT-HTTP/1.3 (1.6.14)
+

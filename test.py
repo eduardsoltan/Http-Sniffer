@@ -8,6 +8,7 @@ import threading
 import sys
 import string
 from collections import deque
+from sortedcontainers import SortedDict
 
 reassembly_strucutre = dict()
 queue = deque([])
@@ -213,14 +214,28 @@ def constructPacket(data):
         if len(data) > 0:
             payload = bytes()
 
-        sortedSegments = sorted(data, key = lambda i: i[0])
+        for idx, a in enumerate(data):
+            if idx == 0:
+                seq_nr = a
+                segemntLength = len(data[a])
+                payload = payload + data[a]
+            else:
+                if seq_nr + segemntLength != a:
+                    return
+                
+                payload = payload + data[a]
+                seq_nr = a 
+                segemntLength = len(data[a])
 
-        for a in range(1, len(sortedSegments), 1):
-            if sortedSegments[a][0] != sortedSegments[a-1][0] + len(sortedSegments[a-1][1]):
-                return
+
+        #sortedSegments = sorted(data, key = lambda i: i[0])
+
+        #for a in range(1, len(sortedSegments), 1):
+        #    if sortedSegments[a][0] != sortedSegments[a-1][0] + len(sortedSegments[a-1][1]):
+        #        return
             
-        for a in sortedSegments:
-            payload = payload + a[1]
+        #for a in sortedSegments:
+        #    payload = payload + a[1]
         parseHttp(payload)
     except Exception as e:
         print(str(e))
@@ -232,7 +247,6 @@ vec = bytes()
 def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, data):
     global count1
     global vec
-    #print(port_src, port_dest, data)
     
     if port_src == 80:
         comunicationIdentifier = ip_dest + ":" + ip_src + ":" + str(port_dest)
@@ -249,7 +263,10 @@ def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, d
 
                 new_set = set()
                 new_set.add(seq_number)
-                reassembly_strucutre[comunicationIdentifier] = [[(seq_number, data)], port_src, new_set]
+
+                new_sorted_dic = SortedDict()
+                new_sorted_dic.setdefault(seq_number, data)
+                reassembly_strucutre[comunicationIdentifier] = [new_sorted_dic, port_src, new_set]
             else:
 
                 if port_src != reassembly_strucutre[comunicationIdentifier][1]:
@@ -261,10 +278,12 @@ def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, d
                         
                     new_set = set()
                     new_set.add(seq_number)
-                    reassembly_strucutre[comunicationIdentifier] = [[(seq_number, data)], port_src, new_set]
+                    new_sorted_dic = SortedDict()
+                    new_sorted_dic.setdefault(seq_number, data)
+                    reassembly_strucutre[comunicationIdentifier] = [new_sorted_dic, port_src, new_set]
                 else:
                     new_set = reassembly_strucutre[comunicationIdentifier][2]
-                    auxiliary_vec = reassembly_strucutre[comunicationIdentifier][0]
+                    sorted_dic = reassembly_strucutre[comunicationIdentifier][0]
                     isResend = False
                     
                     if seq_number in new_set:
@@ -272,8 +291,8 @@ def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, httpVerbs, d
 
                     if isResend == False:
                         new_set.add(seq_number)
-                        auxiliary_vec.append((seq_number, data))
-                        reassembly_strucutre[comunicationIdentifier] = [auxiliary_vec, port_src, new_set]
+                        sorted_dic.setdefault(seq_number, data)
+                        reassembly_strucutre[comunicationIdentifier] = [sorted_dic, port_src, new_set]
                         
             constructPacket(reassembly_strucutre[comunicationIdentifier][0])
     except Exception as e:
