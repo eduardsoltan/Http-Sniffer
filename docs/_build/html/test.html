@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test module &mdash; Http Sniffer 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="gui module" href="gui.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Http Sniffer
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Http Sniffer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gui.html">gui module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">test module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test.assembly_http"><code class="docutils literal notranslate"><span class="pre">assembly_http()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.chunkedHttp"><code class="docutils literal notranslate"><span class="pre">chunkedHttp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.constructPacket"><code class="docutils literal notranslate"><span class="pre">constructPacket()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.ethernet_frame"><code class="docutils literal notranslate"><span class="pre">ethernet_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.formatinIpAddress"><code class="docutils literal notranslate"><span class="pre">formatinIpAddress()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.getHeaderValue"><code class="docutils literal notranslate"><span class="pre">getHeaderValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.getIpInfo"><code class="docutils literal notranslate"><span class="pre">getIpInfo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.get_addr_mac"><code class="docutils literal notranslate"><span class="pre">get_addr_mac()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.parseHttp"><code class="docutils literal notranslate"><span class="pre">parseHttp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.tcpUnpack"><code class="docutils literal notranslate"><span class="pre">tcpUnpack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test.threadClass"><code class="docutils literal notranslate"><span class="pre">threadClass</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#test.threadClass.run"><code class="docutils literal notranslate"><span class="pre">threadClass.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test.verifyExistance"><code class="docutils literal notranslate"><span class="pre">verifyExistance()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Http Sniffer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Http Sniffer</a></li>
+      <li class="breadcrumb-item active">test module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/test.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-test">
+<span id="test-module"></span><h1>test module<a class="headerlink" href="#module-test" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="test.assembly_http">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">assembly_http</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip_src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filterValues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.assembly_http" title="Permalink to this definition"></a></dt>
+<dd><p>Manages a global structure in a form of python dictionary with a keys as comunication identifiers, that stores the the tcp segments
+Comunication identifier is a string that contained both ip addresses and ports.</p>
+<dl class="simple">
+<dt>Input:</dt><dd><p>Source Ip Address
+Destionation Ip Address
+Source Port
+Destination Port
+Sequence Number
+User Filters 
+Data from Tcp Segments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.chunkedHttp">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">chunkedHttp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.chunkedHttp" title="Permalink to this definition"></a></dt>
+<dd><p>Verifies if all content was captured in case the Transfer-Encoding is set to chunked and decode the contetn in standart format</p>
+<dl class="simple">
+<dt>Input: </dt><dd><p>http content encoded in chunked format</p>
+</dd>
+<dt>Output:</dt><dd><p>http content decoded in standard format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.constructPacket">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">constructPacket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comunicationIdentifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filterValues</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.constructPacket" title="Permalink to this definition"></a></dt>
+<dd><p>Create http package by reassembly all catched tcp segments and verifies there are any segements losses</p>
+<dl class="simple">
+<dt>Input:</dt><dd><p>httpPackage
+comunicationIdentifier (source ip, destination ip, source port)
+user given filters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.ethernet_frame">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">ethernet_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.ethernet_frame" title="Permalink to this definition"></a></dt>
+<dd><p>Unpack the ethernet layer</p>
+<p>Input: a internet package captured by socket in form of bytes()</p>
+<p>Return: source mac address, destination mac address, protocol, content of ethernet frame</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.formatinIpAddress">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">formatinIpAddress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip_address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.formatinIpAddress" title="Permalink to this definition"></a></dt>
+<dd><p>Converts ip address from computer readable format to human readable format</p>
+<p>Input: ip address in computer readable format</p>
+<p>Return: ip address in human readable format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.getHeaderValue">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">getHeaderValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headerValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.getHeaderValue" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Input: </dt><dd><p>http headers of a request, 
+name of header for which the value is wanted</p>
+</dd>
+<dt>Return: </dt><dd><p>Value of the requested header</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.getIpInfo">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">getIpInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.getIpInfo" title="Permalink to this definition"></a></dt>
+<dd><p>Unpacking ip layer</p>
+<p>Input: a internet package with ethernet layer unpacked</p>
+<p>Return: Superior level protocol, source ip address, destination ip address, content of the datagram</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.get_addr_mac">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">get_addr_mac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytes_addr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.get_addr_mac" title="Permalink to this definition"></a></dt>
+<dd><p>Convert mac address from bytes to human readable format</p>
+<p>Input: mac address in bytes() format</p>
+<p>Output: mac address in human readalbe format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.main">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filterValues</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.main" title="Permalink to this definition"></a></dt>
+<dd><p>Takes as input user filters such as hostname from which to sniff trafic or/and specific Http methods.</p>
+<p>Function creates a raw socket that will capture internet trafic and will insert packeges in the deque where 
+further processing will be done by worker thread.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.parseHttp">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">parseHttp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">httpPacket</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comunicationIdentifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filterValues</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.parseHttp" title="Permalink to this definition"></a></dt>
+<dd><p>The main function that proces the http package, verifies if all tcp segments have been captured, that these segments have been soreted in right order.
+If during the transfer data was encoded in some format it is ensured that data is decoded. And that a packegs passes user specified filters.</p>
+<dl class="simple">
+<dt>Input:</dt><dd><p>httpPackage
+comunicationIdentifier (source ip, destination ip, source port)
+user given filters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.tcpUnpack">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">tcpUnpack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.tcpUnpack" title="Permalink to this definition"></a></dt>
+<dd><p>Unpack the tcp layer of a dataframe</p>
+<p>Input: A internet package with ethernet and ip layers unpacked</p>
+<p>Return: source port, destination port, sequence number, acknowledgement number, and http content</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="test.threadClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">threadClass</span></span><a class="headerlink" href="#test.threadClass" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></p>
+<p>Worker thread is going to be started by main thread when packages deque has only one element and will run until the deque will be empty</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="test.threadClass.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.threadClass.run" title="Permalink to this definition"></a></dt>
+<dd><p>The main responsabilities of the thread is to pop a internet package from the deque unpack all the layers: ethernet, ip and tcp.
+Extract the content and reconstruct the original http trafic.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test.verifyExistance">
+<span class="sig-prename descclassname"><span class="pre">test.</span></span><span class="sig-name descname"><span class="pre">verifyExistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test.verifyExistance" title="Permalink to this definition"></a></dt>
+<dd><p>Verifies existance of a http package in global memory of http packages</p>
+<dl class="simple">
+<dt>Input:</dt><dd><p>Headers of a http request</p>
+</dd>
+<dt>Return:</dt><dd><p>True if http request is already present in gloabl memory and False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gui.html" class="btn btn-neutral float-left" title="gui module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Soltan Eduard.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

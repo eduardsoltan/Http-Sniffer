@@ -1,11 +1,8 @@
 import socket
 import struct
-import textwrap
 import gzip
 import random
-import shelve
 import threading
-import sys
 import string
 import re
 from collections import deque
@@ -14,14 +11,23 @@ from sortedcontainers import SortedDict
 reassembly_strucutre = dict()
 queue = deque([])
 httpPackets = []
+event = threading.Event()
 
 count = 0
 
 class threadClass(threading.Thread):
+    """
+        Worker thread is going to be started by main thread when packages deque has only one element and will run until the deque will be empty
+    """
+    
     def __init__(self):
         threading.Thread.__init__(self)
  
     def run(self):
+        """
+            The main responsabilities of the thread is to pop a internet package from the deque unpack all the layers: ethernet, ip and tcp.
+            Extract the content and reconstruct the original http trafic. 
+        """
         global queue
         global count
 
@@ -50,6 +56,12 @@ class threadClass(threading.Thread):
 
 
 def main(filterValues):
+    """
+        Takes as input user filters such as hostname from which to sniff trafic or/and specific Http methods.
+
+        Function creates a raw socket that will capture internet trafic and will insert packeges in the deque where 
+        further processing will be done by worker thread.
+    """
     global queue
     global event
 
@@ -67,11 +79,26 @@ def main(filterValues):
             t1.start()
 
 def ethernet_frame(data):
+    """
+        Unpack the ethernet layer    
+
+        Input: a internet package captured by socket in form of bytes() 
+
+        Return: source mac address, destination mac address, protocol, content of ethernet frame
+    """
+
     dest_mac, src_mac, protocol = struct.unpack("! 6s 6s H", data[:14])
 
     return get_addr_mac(dest_mac), get_addr_mac(src_mac), socket.htons(protocol), data[14:]
 
 def get_addr_mac(bytes_addr):
+    """
+        Convert mac address from bytes to human readable format
+
+        Input: mac address in bytes() format
+
+        Output: mac address in human readalbe format
+    """
     str = []
     for a in bytes_addr:
         h = hex(a)
@@ -82,6 +109,14 @@ def get_addr_mac(bytes_addr):
     return ':'.join(str).upper()
 
 def getIpInfo(data):
+    """
+        Unpacking ip layer
+
+        Input: a internet package with ethernet layer unpacked
+
+        Return: Superior level protocol, source ip address, destination ip address, content of the datagram  
+    """
+
     dataframe_length = bin(data[0])[-4:]
     dataframe_length = int(dataframe_length, 2)
 
@@ -90,12 +125,28 @@ def getIpInfo(data):
     return protocol_type, ip_src, ip_destination, data[dataframe_length * 4:]
 
 def formatinIpAddress(ip_address):
+    """
+        Converts ip address from computer readable format to human readable format
+
+        Input: ip address in computer readable format
+
+        Return: ip address in human readable format
+    """
+    
     str_array = []
     for a in ip_address:
         str_array.append(str(a))
     return '.'.join(str_array)
 
 def tcpUnpack(data):
+    """
+        Unpack the tcp layer of a dataframe
+
+        Input: A internet package with ethernet and ip layers unpacked
+
+        Return: source port, destination port, sequence number, acknowledgement number, and http content
+    """
+
     isHttpPackage = False
     port_src, port_destiantion, seq_number, ack_number, lenght_and_flags = struct.unpack("! H H L L H", data[:14])
     
@@ -114,6 +165,15 @@ def tcpUnpack(data):
 
 
 def getHeaderValue(headers, headerValue):
+    """
+        Input: 
+            http headers of a request, 
+            name of header for which the value is wanted
+
+        Return: 
+            Value of the requested header
+    """
+
     headers = headers.decode("utf-8")
     splitHeaders = headers.split("\r\n")
 
@@ -124,6 +184,16 @@ def getHeaderValue(headers, headerValue):
     return val.strip()
 
 def chunkedHttp(data):
+    """
+        Verifies if all content was captured in case the Transfer-Encoding is set to chunked and decode the contetn in standart format
+
+        Input: 
+            http content encoded in chunked format
+
+        Output:
+            http content decoded in standard format 
+    """
+
     splitChunked = data.split(b"\r\n")
     if len(splitChunked[-1]) == 0:
         splitChunked = splitChunked[:-1] 
@@ -144,14 +214,34 @@ def chunkedHttp(data):
     return payload
 
 def verifyExistance(headers, content):
+    """
+        Verifies existance of a http package in global memory of http packages
+
+        Input:
+            Headers of a http request
+        
+        Return:
+            True if http request is already present in gloabl memory and False otherwise
+    """
+    
     global httpPackets
 
     for a in httpPackets:
-        if a[0] == headers:
+        if a[0] == headers and a[1] == content:
             return False
     return True
     
 def parseHttp(httpPacket, comunicationIdentifier, filterValues):
+    """
+        The main function that proces the http package, verifies if all tcp segments have been captured, that these segments have been soreted in right order.
+        If during the transfer data was encoded in some format it is ensured that data is decoded. And that a packegs passes user specified filters.
+
+        Input:
+            httpPackage
+            comunicationIdentifier (source ip, destination ip, source port)
+            user given filters
+    """
+    
     global httpPackets
     global reassembly_strucutre
 
@@ -180,7 +270,6 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
             reassembly_strucutre[comunicationIdentifier][3] = False
             return
 
-
         if len(length) > 0:
             length = int(length)
         else:
@@ -200,13 +289,14 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
         if len(splitRequest[1]) == 0:
             if verifyExistance(headers, "") == True:
                 httpPackets.append((headers, ""))
+                event.set()
             return
 
         str1 = ''.join(random.choices(string.ascii_lowercase, k=15))
         str1 = 'files/' + str1
 
 
-        contentEncoding = getHeaderValue(splitRequest[0], "Content-Encoding")
+        contentEncoding =   getHeaderValue(splitRequest[0], "Content-Encoding")
 
         if contentEncoding == 'gzip':
             splitEncoded = splitRequest[1].split(b"\r\n")
@@ -214,21 +304,33 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
 
             content = gzip.decompress(maxLenString)
 
-            if verifyExistance(headers, str1):
-                httpPackets.append((headers, str1))
-                f = open(str1, "wb")
-                f.write(content)
-                f.close()
+            httpPackets.append((headers, str1))
+            f = open(str1, "wb")
+            f.write(content)
+            event.set()
+            f.close()
+            #del reassembly_strucutre[comunicationIdentifier]
         else:
-            if verifyExistance(headers, str1):
-                f = open(str1, "wb")
-                httpPackets.append((headers, str1))
-                f.write(splitRequest[1])
-                f.close()
+            f = open(str1, "wb")
+            httpPackets.append((headers, str1))
+            f.write(splitRequest[1])
+            if event.is_set() == False:
+                event.set()
+            f.close()
+            #del reassembly_strucutre[comunicationIdentifier]
     except Exception as e:
         print(str(e))
 
 def constructPacket(data, comunicationIdentifier, filterValues):
+    """
+        Create http package by reassembly all catched tcp segments and verifies there are any segements losses
+
+        Input:
+            httpPackage
+            comunicationIdentifier (source ip, destination ip, source port)
+            user given filters
+    """
+    
     try:
         if len(data) > 0:
             payload = bytes()
@@ -250,14 +352,21 @@ def constructPacket(data, comunicationIdentifier, filterValues):
     except Exception as e:
         print(str(e))
 
-
-count1 = 0
-vec = bytes()
-
 def assembly_http(ip_src, ip_dest, port_src, port_dest, seq_number, filterValues, data):
-    global count1
-    global vec
-    
+    """
+        Manages a global structure in a form of python dictionary with a keys as comunication identifiers, that stores the the tcp segments
+        Comunication identifier is a string that contained both ip addresses and ports.
+
+        Input:
+            Source Ip Address
+            Destionation Ip Address
+            Source Port
+            Destination Port
+            Sequence Number
+            User Filters 
+            Data from Tcp Segments
+    """
+
     if port_src == 80:
         comunicationIdentifier = ip_dest + ":" + ip_src + ":" + str(port_dest)
     else:
