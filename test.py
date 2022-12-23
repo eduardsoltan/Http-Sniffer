@@ -7,11 +7,13 @@ import string
 import re
 from collections import deque
 from sortedcontainers import SortedDict
+import time
 
 reassembly_strucutre = dict()
 queue = deque([])
 httpPackets = []
 event = threading.Event()
+fileDescriptor = open("logs", "wb")
 
 count = 0
 
@@ -66,8 +68,8 @@ def main(filterValues):
     global event
 
     conn = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(3))
-    conn.setsockopt( socket.SOL_SOCKET, socket.SO_RCVBUF, 100000000) 
-        
+    conn.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 100000000)
+
     while True:
         #65536
         raw_data, addr = conn.recvfrom(65536)
@@ -244,6 +246,7 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
     
     global httpPackets
     global reassembly_strucutre
+    global fileDescriptor
 
     try:
         if reassembly_strucutre[comunicationIdentifier][3] == False:
@@ -288,6 +291,16 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
 
         if len(splitRequest[1]) == 0:
             if verifyExistance(headers, "") == True:
+                t = time.localtime()
+                current_time = time.strftime("%D %H:%M:%S", t)
+                
+                log = "Packet received at " + current_time + "\n"
+                fileDescriptor.write(bytes(log, 'utf-8'))
+                fileDescriptor.write(bytes(headers, 'utf-8'))
+                fileDescriptor.write(bytes("\n", 'utf-8'))
+                fileDescriptor.write(bytes("\n", 'utf-8'))
+
+
                 httpPackets.append((headers, ""))
                 event.set()
             return
@@ -304,6 +317,17 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
 
             content = gzip.decompress(maxLenString)
 
+            t = time.localtime()
+            current_time = time.strftime("%D %H:%M:%S", t)
+                
+            log = "Packet received at " + current_time + "\n"
+            fileDescriptor.write(bytes(log, 'utf-8'))
+            fileDescriptor.write(bytes(headers, 'utf-8'))
+            fileDescriptor.write(content)
+            fileDescriptor.write(bytes("\n", 'utf-8'))
+            fileDescriptor.write(bytes("\n", 'utf-8'))
+
+
             httpPackets.append((headers, str1))
             f = open(str1, "wb")
             f.write(content)
@@ -312,6 +336,17 @@ def parseHttp(httpPacket, comunicationIdentifier, filterValues):
             #del reassembly_strucutre[comunicationIdentifier]
         else:
             f = open(str1, "wb")
+
+            t = time.localtime()
+            current_time = time.strftime("%D %H:%M:%S", t)
+                
+            log = "Packet received at " + current_time + "\n"
+            fileDescriptor.write(bytes(log, 'utf-8'))
+            fileDescriptor.write(bytes(headers, 'utf-8'))
+            fileDescriptor.write(splitRequest[1])
+            fileDescriptor.write(bytes("\n", 'utf-8'))
+            fileDescriptor.write(bytes("\n", 'utf-8'))
+
             httpPackets.append((headers, str1))
             f.write(splitRequest[1])
             if event.is_set() == False:

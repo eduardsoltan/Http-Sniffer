@@ -50,8 +50,6 @@ class dispacherThread(threading.Thread):
 
             if len(oldVersionHttp) == len(t.httpPackets):
                 return
-            
-            print(123)
 
             for httpPacket in range(len(oldVersionHttp), len(t.httpPackets), 1):
                 if t.httpPackets[httpPacket] in oldVersionHttp:
